@@ -4,10 +4,10 @@ services:
     env: python
     region: oregon
     plan: free
-    buildCommand: "./download_requirements.sh"
-    startCommand: "python app.py"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn -w 4 -b 0.0.0.0:5000 app:app"
     envVars:
       - key: YOUR_UPTIMEROBOT_API_KEY
-        value: "m797292850-2284efeade23e93d0e14759f"  # 実際のAPIキーに置き換えてください
+        value: "m797292850-2284efeade23e93d0e14759f"
       - key: YOUR_BOT_TOKEN
-        value: "3GehcjIl0wQeWqdO4SEVY4C4oYl1d2Apz4MmdF7YJVAKlk1J6AITP8Qw5cP4gmCf"  # 実際のRevolt Botのトークンに置き換えてください
+        value: "3GehcjIl0wQeWqdO4SEVY4C4oYl1d2Apz4MmdF7YJVAKlk1J6AITP8Qw5cP4gmCf"
