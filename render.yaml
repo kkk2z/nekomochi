@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: nekomochi-bot
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "./download_requirements.sh"
+    startCommand: "python app.py"
+    envVars:
+      - key: YOUR_UPTIMEROBOT_API_KEY
+        value: "m797292850-2284efeade23e93d0e14759f"  # 実際のAPIキーに置き換えてください
+      - key: YOUR_BOT_TOKEN
+        value: "3GehcjIl0wQeWqdO4SEVY4C4oYl1d2Apz4MmdF7YJVAKlk1J6AITP8Qw5cP4gmCf"  # 実際のRevolt Botのトークンに置き換えてください
