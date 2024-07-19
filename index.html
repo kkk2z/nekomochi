@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ねこもちBOT公式ページ</title>
+    <meta name="description" content="Revoltに存在するBot'ねこもち'の公式ページ並びに常時オンライン化用のページです。　無断転載などは、世界の果てまで追いかけた後釘バットでふっ飛ばします" />
+    meta keyword <meta name="keywords" content="render.com,uptimerobot.com,kkk2z1,kkk2z,AI,bot,Revolt" />
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        h1 { color: #333; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+    <h1>ねこもちBOT公式ページ!</h1>
+    <p>ねこもちは、render.comによってホストされているkkk2z1のBotです。</p>
+    <p>pingは、<span id="ping">Loading...</span>です!</p>
+    <script>
+        async function fetchPing() {
+            const response = await fetch('/ping');
+            const data = await response.json();
+            document.getElementById('ping').textContent = data.ping;
+        }
+        fetchPing();
+    </script>
+    <h2>・このページに関する注意<h2><br>
+    <p>・このページにアフェリエイト(広告)が表示された場合、主が小遣い稼ぎとrenderの支払いのために設置です<p>
+    <br>
+    <p>このページは、render.comでホストされておりuptimerobotで定期的にpingを送信することでBotを基本、常時オンライン状態にしています。
+    <br>
+    <p>つまりあなたは、Botの常時起動をするために利用されました<p>
+</body>
+</html>
