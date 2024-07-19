@@ -2,7 +2,6 @@ transformers
 datasets
 torch
 revolt.py
-sqlite3
 pandas
 requests
 flask
